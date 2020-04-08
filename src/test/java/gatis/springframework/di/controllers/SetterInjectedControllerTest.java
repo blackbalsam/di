@@ -1,6 +1,6 @@
 package gatis.springframework.di.controllers;
 
-import gatis.springframework.di.services.impl.GreetingServiceImpl;
+import gatis.springframework.di.services.impl.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
